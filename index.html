@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anushka Srivastava | Portfolio</title>
+<meta name="description" content="Portfolio of Anushka Srivastava, AI and Data Science student. Machine learning, LLM tools, and data projects.">
+<meta property="og:title" content="Anushka Srivastava | Portfolio">
+<meta property="og:description" content="Career road, projects, research and certifications.">
+<meta name="theme-color" content="#f6f8fc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e3ddf6'/%3E%3Ctext x='32' y='41' font-size='26' text-anchor='middle' font-family='sans-serif' font-weight='700' fill='%2343377d'%3EAS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f6f8fc; --surface:#ffffff; --ink:#262b40; --ink-2:#585f7e; --line:#e1e6f2;
+  --sky:#d6eaf8; --sky-ink:#1f4e79;
+  --lav:#e3ddf6; --lav-ink:#43377d;
+  --mint:#d5f0e4; --mint-ink:#1d5a43;
+  --peach:#fde3d3; --peach-ink:#7a3d1c;
+  --rose:#f9dce7; --rose-ink:#7d2a4a;
+  --accent:#5b6fd6; --on-accent:#ffffff; --road:#d9dff0; --lane:#ffffff;
+  --display:'Bricolage Grotesque','DM Sans',system-ui,sans-serif;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14172a; --surface:#1d2138; --ink:#e8eaf6; --ink-2:#a3a9c9; --line:#2f3556;
+    --sky:#25405a; --sky-ink:#bcdcf5; --lav:#342e5a; --lav-ink:#d6cdf8;
+    --mint:#1f4a3b; --mint-ink:#bfe9d6; --peach:#5a3a2a; --peach-ink:#fbd9c3;
+    --rose:#5a2d41; --rose-ink:#f8cfe0; --accent:#9aa8ff; --on-accent:#14172a;
+    --road:#2a3050; --lane:#3c4570; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14172a; --surface:#1d2138; --ink:#e8eaf6; --ink-2:#a3a9c9; --line:#2f3556;
+  --sky:#25405a; --sky-ink:#bcdcf5; --lav:#342e5a; --lav-ink:#d6cdf8;
+  --mint:#1f4a3b; --mint-ink:#bfe9d6; --peach:#5a3a2a; --peach-ink:#fbd9c3;
+  --rose:#5a2d41; --rose-ink:#f8cfe0; --accent:#9aa8ff; --on-accent:#14172a;
+  --road:#2a3050; --lane:#3c4570; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0;font-weight:700;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tone-sky{--t:var(--sky);--ti:var(--sky-ink)}
+.tone-lav{--t:var(--lav);--ti:var(--lav-ink)}
+.tone-mint{--t:var(--mint);--ti:var(--mint-ink)}
+.tone-peach{--t:var(--peach);--ti:var(--peach-ink)}
+.tone-rose{--t:var(--rose);--ti:var(--rose-ink)}
+
+.topbar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;height:56px}
+.brand{font:700 17px var(--display);text-decoration:none;background:var(--lav);color:var(--lav-ink);width:36px;height:36px;border-radius:10px;display:grid;place-items:center}
+.bar nav{display:flex;gap:4px;margin-left:auto;flex-wrap:nowrap}
+.bar nav a{white-space:nowrap}
+.bar nav a{font-size:14px;text-decoration:none;color:var(--ink-2);padding:6px 10px;border-radius:8px}
+.bar nav a:hover{background:var(--surface);color:var(--ink)}
+.theme{white-space:nowrap;font:500 13px var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:99px;padding:6px 12px;cursor:pointer}
+.theme:hover{border-color:var(--accent)}
+
+.profile{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:20px}
+.cover{height:clamp(120px,22vw,220px);background-color:var(--sky);background-size:cover;background-position:center;
+  background-image:radial-gradient(circle at 18% 35%,var(--lav) 0 17%,transparent 17.5%),radial-gradient(circle at 78% 65%,var(--mint) 0 21%,transparent 21.5%),radial-gradient(circle at 56% 22%,var(--peach) 0 9%,transparent 9.5%)}
+.cover.has-img{background-image:var(--cover-img)}
+.profile-body{padding:0 clamp(16px,3vw,28px) 24px}
+.avatar{width:clamp(88px,14vw,132px);aspect-ratio:1;border-radius:50%;border:5px solid var(--surface);margin-top:calc(-1 * clamp(44px,7vw,66px));background:var(--lav);color:var(--lav-ink);display:grid;place-items:center;font:700 clamp(28px,5vw,44px) var(--display);overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.profile h1{font-size:clamp(28px,5vw,40px);margin-top:12px}
+.headline{color:var(--ink-2);font-size:18px;margin-top:2px}
+.meta{font-family:var(--mono);font-size:13px;color:var(--ink-2);margin-top:4px}
+.about{max-width:62ch;margin-top:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;font-weight:500;padding:4px 12px;border-radius:99px;background:var(--t);color:var(--ti)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;gap:6px;font:500 15px var(--body);text-decoration:none;padding:10px 18px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+
+section.block{margin-top:56px;scroll-margin-top:72px}
+.block-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.block-head h2{font-size:clamp(24px,4vw,32px)}
+.hint{font-family:var(--mono);font-size:13px;color:var(--ink-2)}
+.road{position:relative;margin-top:12px}
+.road svg{display:block;position:absolute;inset:0}
+.road .node{fill:var(--surface);stroke:var(--line);stroke-width:3;transition:fill .3s,stroke .3s}
+.road .node.reached{fill:var(--t);stroke:var(--ti)}
+.stop{position:absolute;transform:translateY(-50%);background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--ink);opacity:.5;transition:opacity .3s,border-color .2s,transform .2s}
+.stop.reached{opacity:1}
+a.stop:hover{border-color:var(--ti);transform:translateY(calc(-50% - 3px))}
+.stop .date{align-self:flex-start;font:500 12px var(--mono);background:var(--t);color:var(--ti);padding:2px 10px;border-radius:99px;margin-bottom:4px}
+.stop strong{font:700 17px/1.25 var(--display)}
+.stop .sub{font-size:14px;color:var(--ink-2);line-height:1.45}
+.stop .go{font-size:13px;font-weight:500;color:var(--ti);margin-top:6px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.card.todo{border-style:dashed}
+.card .kind{align-self:flex-start;font:500 12px var(--mono);background:var(--t);color:var(--ti);padding:2px 10px;border-radius:99px}
+.card h3{font-size:18px;margin-top:6px}
+.card .small{font-size:14px;color:var(--ink-2)}
+.card a{font-size:14px;font-weight:500;color:var(--accent)}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(18px,3vw,28px);margin-top:18px}
+.contact p{max-width:60ch}
+.contact .mail{font:500 16px var(--mono);margin-top:10px;user-select:all;word-break:break-all}
+footer{margin-top:64px;padding-block:28px;border-top:1px solid var(--line);color:var(--ink-2);font-size:14px}
+
+.back{display:inline-block;margin-top:20px;font-size:15px;font-weight:500;color:var(--ink-2);text-decoration:none}
+.back:hover{color:var(--ink)}
+.page-head{background:var(--t);color:var(--ti);border-radius:20px;padding:clamp(20px,4vw,36px);margin-top:14px}
+.page-head .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pill{font:500 12px var(--mono);background:var(--surface);color:var(--ink);padding:3px 12px;border-radius:99px}
+.pill.todo{border:1px dashed var(--ti);background:transparent;color:var(--ti)}
+.page-head h1{font-size:clamp(30px,6vw,48px);margin-top:12px}
+.lead{max-width:64ch;margin-top:12px;font-size:17px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.draft{margin-top:14px;font-size:14px;background:var(--surface);color:var(--ink);border:1px dashed var(--ti);border-radius:12px;padding:8px 12px;max-width:64ch}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:20px}
+.metric{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.metric b{display:block;font:700 28px var(--display);color:var(--ti)}
+.metric span{font-size:13px;color:var(--ink-2)}
+.grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:36px}
+.grid h2{font-size:22px}
+.flow{list-style:none;margin:14px 0 0;padding:0}
+.flow li:not(:last-child)::after{content:"\2193";display:block;text-align:center;color:var(--ink-2);line-height:22px}
+.step{width:100%;display:flex;align-items:center;gap:12px;text-align:left;font:500 16px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer}
+.step:hover{border-color:var(--ti)}
+.step .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--t);color:var(--ti);display:grid;place-items:center;font:700 13px var(--mono)}
+.step .name{flex:1;min-width:0}
+.step.active{background:var(--t);border-color:var(--ti);color:var(--ti)}
+.step.active .n{background:var(--surface)}
+.badge{font:500 11px var(--mono);padding:2px 8px;border-radius:99px;background:var(--bg);color:var(--ink-2);border:1px solid var(--line)}
+.badge.built{background:var(--mint);color:var(--mint-ink);border-color:transparent}
+.side{display:flex;flex-direction:column;gap:16px;position:sticky;top:76px}
+.detail{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.detail .count{font:500 12px var(--mono);color:var(--ink-2)}
+.detail h3{font-size:20px;margin-top:4px}
+.detail p{margin-top:8px}
+.detail ul{margin:10px 0 0;padding-left:20px;color:var(--ink-2)}
+.detail li+li{margin-top:4px}
+.stack{background:var(--t);color:var(--ti);border-radius:16px;padding:18px 20px}
+.stack h3{font-size:18px}
+.stack .chips{margin-top:12px}
+.stack .chip{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px}
+.pn a{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;display:flex;flex-direction:column;gap:2px;min-width:0}
+.pn a:hover{border-color:var(--accent)}
+.pn small{font:500 12px var(--mono);color:var(--ink-2)}
+.pn .next{text-align:right}
+@media (max-width:820px){
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .side{position:static}
+}
+@media (max-width:520px){
+  .bar nav a{padding:6px 5px;font-size:13px}
+  .bar{gap:6px}
+  .theme{padding:6px 10px}
+}
+@media (prefers-reduced-motion: reduce){
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="#/home" aria-label="Home">AS</a>
+    <nav aria-label="Sections">
+      <a href="#/journey">Journey</a>
+      <a href="#/certs">Certificates</a>
+      <a href="#/contact">Contact</a>
+    </nav>
+    <button class="theme" id="themeBtn" type="button">Dark</button>
+  </div>
+</header>
+<main class="wrap" id="app"></main>
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script>
+/* ==========================================================================
+   EDIT THIS BLOCK. Everything shown on the site comes from DATA.
+   - Leave a link or image as "" to hide it.
+   - Items marked todo:true show a dashed "placeholder" look. Remove todo when real.
+   - Put images in an assets/ folder: assets/photo.jpg, assets/cover.jpg, assets/resume.pdf
+   ========================================================================== */
+const DATA = {
+  profile: {
+    name: "Anushka Srivastava",
+    headline: "AI & Data Science student",
+    location: "Navi Mumbai, Maharashtra",
+    about: "B.Tech student at Ramrao Adik Institute of Technology, D. Y. Patil University. I build machine learning systems and LLM tools, and I like working close to the data.",
+    skills: ["Python", "SQL", "PostgreSQL", "Machine learning", "LLMs"],
+    photo: "assets/photo.jpg",
+    cover: "assets/cover.jpg",
+    resume: "assets/resume.pdf",
+    email: "anushkasri144@gmail.com",
+    linkedin: "https://www.linkedin.com/in/anushka-srivastava-a4b024287/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BChne3d5vT8iahTlYq3plYg%3D%3D",
+    github: "https://github.com/anushkaSri-04"
+  },
+
+  /* The road, in order from top to bottom. A stop with a page opens #/p/<id>. */
+  stops: [
+    { id: "btech", date: "Aug 2023", title: "B.Tech begins", sub: "AI & Data Science at RAIT, D. Y. Patil University", tone: "sky" },
+    { id: "hackathon", date: "30-hour hackathon, March 2025", title: "iDEA Hackathon - Presented by Union Bank", sub: "Semi-Finalists", tone: "peach", page: true },
+    { id: "credit-scoring", date: "Project", title: "Credit scoring", sub: "Stacked ensemble on Lending Club loans", tone: "lav", page: true },
+    { id: "bluestock", date: "Sept - Oct 2025", title: "SDE intern, Bluestock Fintech", sub: "Python, Django, PostgreSQL", tone: "mint", page: true },
+    { id: "research", date: "Research", title: "Research paper", sub: "Generative AI with a speech focus", tone: "rose", page: true },
+    { id: "mcp-devmate", date: "Oct 2026 - now", title: "MCP DevMate AI", sub: "Coding assistant on a local MCP server", tone: "peach", page: true },
+    { id: "graduation", date: "June 2027", title: "Graduation", sub: "B.Tech, AI & Data Science", tone: "sky" }
+],
+
+  pages: {
+    "hackathon": {
+    kind: "Hackathon",
+    title: "iDEA Hackathon - Presented by Union Bank",
+    duration: "30-hour hackathon, March 2025",
+    description: "Loan eligibility prediction for people with little or no credit history. The model predicts loan approval from everyday financial signals instead of a credit score: UPI transaction frequency, rent payments, job stability and mobile recharge patterns. Built and presented during the 30-hour iDEA Hackathon presented by Union Bank, where the project was selected.",
+    metrics: [],
+    steps: [
+        { title: "Problem", text: "Many people have no credit score or credit card, so banks cannot judge them with traditional scoring. The goal was to predict loan approval from other evidence of financial behavior." },
+        { title: "Solution", text: "A machine learning model that reads alternative indicators such as UPI activity, rent payments, job stability and mobile recharge patterns, and predicts whether a loan should be approved." },
+        {title: "Feature Engineering", text: "Raw signals were turned into features that help separate likely repayers from risky applicants."},
+        {title: "Model Comparison", text: "Rnadom Forest,SVM,XGBoost were trained and compared to find the mose accurate model."},
+        {title: "Hackathon build and pitch", text: "Built within the 30-hour coding session and presented at the iDEA Hackathon by Union Bank."}
+    ],
+    stack: ["Python", "Machine learning", "Random Forest", "SVM", "XGBoost"],
+    links: []
+    },
+
+
+    "credit-scoring": {
+      kind: "Project",
+      title: "Behavior-based credit scoring",
+      duration: "Sept 2026",
+      durationTodo: true,
+      description: "A credit scoring model that predicts loan outcomes from repayment behavior instead of application data. A stacked ensemble of XGBoost, CatBoost, LightGBM and an ANN, with SHAP feature pruning and Optuna tuning to push AUC as high as possible.",
+      metrics: [
+        { value: "0.7235", label: "Test ROC-AUC" },
+        { value: "0.9072", label: "Test PR-AUC" },
+        { value: "45 of 65", label: "Features kept after SHAP" },
+        { value: "1.35M", label: "Loans in the processed data" },
+        { value: "0.694", label: "Thin-file AUC, Home Credit" }
+      ],
+      steps: [
+        { title: "Data and framing", text: "The model uses Lending Club loans. The processed set has 1,348,099 rows and 65 behavior features. It has no application-time fields such as grade, income or purpose, so this is behavior scoring, not application scoring.",
+          points: ["Class weights (balanced) handle the imbalance.", "SMOTE was tried but ran too slowly at this size."] },
+        { title: "Feature pruning with SHAP", text: "SHAP ranks every feature by importance. Dropping the bottom 20 left 45 features and held performance. Dropping 25 or 30 caused a real decline.",
+          points: ["Best pruned result: Test ROC-AUC 0.7236 on 45 features."] },
+        { title: "Base learners", text: "XGBoost, CatBoost, LightGBM and an ANN are trained on the same features. Each one picks up different patterns in the data." },
+        { title: "Tuning with Optuna", text: "Optuna searches hyperparameters for the three tree models. Tuning on its own gave little gain. Combined with pruning it produced the best result." },
+        { title: "Meta-learner", text: "A logistic regression learns how to weigh the base models. It trains on their validation-set predictions and is scored on the test set." },
+        { title: "Ablations and a quantum test", text: "Nine ablations stayed at or below the 0.723 ceiling, including WOE binning, extra learners, interaction features, SMOTE and TabNet. A simulated quantum classifier built with PennyLane lowered the stack's score (0.7088 against 0.7222 on a matched subsample)." }
+      ],
+      stack: ["Python", "scikit-learn", "XGBoost", "CatBoost", "LightGBM", "ANN", "SHAP", "Optuna", "PennyLane", "Jupyter"],
+      links: [{ label: "Code on GitHub", url: "https://github.com/anushkaSri-04/Behavior-Based-Alternative-Credit-Scoring" }]
+    },
+
+    "bluestock": {
+      kind: "Internship",
+      title: "SDE intern at Bluestock Fintech",
+      duration: "Sept - Oct 2025",
+      description: "Software development internship working with Python, Django, PostgreSQL and REST APIs. I built the company's database to its requirements and wrote the queries that pull information out of it.",
+      draft: "Draft. Replace these steps with what you actually built and the outcomes.",
+      /*metrics: [],*/
+      steps: [
+        { title: "Requirements", text: "Turned the company's requirements into a database structure." },
+        { title: "Database build", text: "Built the database in PostgreSQL using SQL and PL/SQL." },
+        { title: "Queries", text: "Wrote queries to extract the information the team needed from the database." },
+        { title: "Application layer", text: "Worked with Python, Django and REST APIs around the data." }
+      ],
+      stack: ["Python", "Django", "PostgreSQL", "SQL", "PL/SQL", "REST APIs"],
+      links: [{label: "Certificate", url: "assets/certs/AnushkaSrivastava_BluestockIntenship.pdf"}]
+    },
+
+    "research": {
+      kind: "Research paper",
+      title: "Research paper",
+      duration: "Aug 2025",
+      durationTodo: true,
+      description: "Advanced research project on generative AI and large language models with a speech-related focus. The final topic and title are still being chosen.",
+      draft: "Draft. Add the title, status (draft, submitted or published), abstract and method steps once the topic is final.",
+      metrics: [
+        { value: "28,709 FER-2013", label: "Dataset size" },
+        { value: "5.07", label: "Generator Score" },
+        { value: "0.18", label: "Discriminator Score" }
+    ],
+      steps: [
+        { title: "Problem", text: "Add the question the paper asks and why it matters.", todo: true },
+        { title: "Related work", text: "Add the papers and methods this builds on.", todo: true },
+        { title: "Method", text: "Add the approach and the architecture.", todo: true },
+        { title: "Experiments", text: "Add datasets, baselines and setup.", todo: true },
+        { title: "Results", text: "Add the main numbers and what they show.", todo: true }
+      ],
+      stack: ["Python", "LLMs", "Speech models"],
+      links: [{label: "Paper Link", url: "https://arxiv.org/abs/2508.04481"}]
+    },
+
+    "mcp-devmate": {
+      kind: "Project",
+      title: "MCP DevMate AI",
+      duration: "Oct 2026 - present",
+      status: "In progress",
+      description: "A repository-aware AI coding assistant. It exposes code analysis and GitHub workflows through a local Model Context Protocol (MCP) server, so an LLM can work with real repositories, issues and source code through structured tools.",
+      metrics: [],
+      steps: [
+        { title: "GitHub client", status: "Built", text: "A reusable GitHub REST API client.",
+          points: ["Authenticated requests and configurable timeouts.", "API versioning and HTTP error handling.", "Secrets read from the environment."] },
+        { title: "GitHub tools", status: "Built", text: "Modular tools for repository discovery, repository details, issue retrieval, open-issue counting and multi-repository issue aggregation." },
+        { title: "Reliability", status: "Built", text: "Calls stay safe and bounded.",
+          points: ["Pagination, input validation and pull-request filtering.", "Rate-limit awareness with retries and exponential backoff.", "Retry-After and X-RateLimit-Reset support."] },
+        { title: "Automated tests", status: "Built", text: "Pytest with HTTP mocking covers input errors, API behavior, retry logic and issue counting." },
+        { title: "MCP server", status: "Planned", text: "Expose list_repositories, count_open_issues, list_issues, search_code, explain_code, investigate_bug and suggest_tests through the MCP Python SDK. Read-only tools come first. Write actions arrive after the safeguards are tested." },
+        { title: "Code retrieval and RAG", status: "Planned", text: "Parse Python with the AST module, embed code with Sentence-Transformers and index it in FAISS or Chroma to answer repository-specific questions." },
+        { title: "Benchmark", status: "Planned", text: "A set of 50 to 100 questions that measures tool-selection accuracy, execution success, task success, answer correctness and latency." }
+      ],
+      stack: ["Python", "MCP Python SDK", "FastAPI", "Pydantic", "GitHub REST API", "Pytest", "FAISS / Chroma", "Sentence-Transformers", "Docker", "GitHub Actions"],
+      links: [{label: "Paper Link", url: "https://github.com/anushkaSri-04/DevMate-AI"}]
+    }
+  },
+
+  certs: [
+    { type: "Certification", title: "Deep Reinforcement Learning using python 2025", org: "Udemy", year: "2025", url: "assets/certs/AnuhskaSrivastava_DeepReinforcementUdemy.pdf", todo: true },
+    { type: "Certification", title: "Python (Basic)", org: "HackerRank", year: "2025", url: "assets/certs/AnushkaSrivastava_python.pdf", todo: true },
+    { type: "Certification", title: "CSS Basics", org: "edX:W3Cx", year: "2025", url: "assets\certs\AnushkaSrivastava_WebDev.pdf", todo: true },
+    { type: "Certification", title: " Introduction to SQL", org: "edX:IBM", year: "2024", url: "assets/certs/AnushkaSrivastava_SQL.pdf", todo: true }
+  ]
+};
+/* ======================= end of editable block ============================ */
+
+const TONES = ["tone-sky", "tone-lav", "tone-mint", "tone-peach", "tone-rose"];
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const app = document.getElementById("app");
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const ext = u => /^https?:\/\//.test(u) ? ` target="_blank" rel="noopener noreferrer"` : "";
+const initials = n => n.split(/\s+/).map(w => w[0]).slice(0, 2).join("").toUpperCase();
+
+/* ---------- theme ---------- */
+const themeBtn = $("#themeBtn");
+function effectiveTheme() {
+  return document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+}
+function syncThemeBtn() {
+  const dark = effectiveTheme() === "dark";
+  themeBtn.textContent = dark ? "Light" : "Dark";
+  themeBtn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+}
+try { const saved = localStorage.getItem("theme"); if (saved) document.documentElement.dataset.theme = saved; } catch (e) {}
+themeBtn.addEventListener("click", () => {
+  const next = effectiveTheme() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("theme", next); } catch (e) {}
+  syncThemeBtn();
+});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", syncThemeBtn);
+syncThemeBtn();
+
+/* ---------- home ---------- */
+function homeView() {
+  const p = DATA.profile;
+  const chips = p.skills.map((s, i) => `<span class="chip ${TONES[i % TONES.length]}">${esc(s)}</span>`).join("");
+  const coverStyle = p.cover ? ` style="--cover-img:url('${esc(p.cover)}')"` : "";
+  const avatar = p.photo ? `<img src="${esc(p.photo)}" alt="${esc(p.name)}">` : esc(initials(p.name));
+  const resumeBtn = p.resume ? `<a class="btn primary" href="${esc(p.resume)}" target="_blank" rel="noopener">Download resume</a>` : "";
+  const stops = DATA.stops.map((s, i) => {
+    const inner = `<span class="date">${esc(s.date)}</span><strong>${esc(s.title)}</strong><span class="sub">${esc(s.sub)}</span>${s.page ? `<span class="go">Open page</span>` : ""}`;
+    return s.page
+      ? `<a class="stop tone-${s.tone}" data-i="${i}" href="#/p/${esc(s.id)}">${inner}</a>`
+      : `<div class="stop tone-${s.tone}" data-i="${i}">${inner}</div>`;
+  }).join("");
+  const certs = DATA.certs.map((c, i) => `
+    <div class="card ${TONES[(i + 3) % TONES.length]}${c.todo ? " todo" : ""}">
+      <span class="kind">${esc(c.type)}</span>
+      <h3>${esc(c.title)}</h3>
+      <span class="small">${esc(c.org)}</span>
+      <span class="small">${esc(c.year)}</span>
+      ${c.url ? `<a href="${esc(c.url)}"${ext(c.url)}>View credential</a>` : ""}
+    </div>`).join("");
+  const links = [
+    p.linkedin && `<a class="btn" href="${esc(p.linkedin)}"${ext(p.linkedin)}>LinkedIn</a>`,
+    p.github && `<a class="btn" href="${esc(p.github)}"${ext(p.github)}>GitHub</a>`,
+    p.resume && `<a class="btn" href="${esc(p.resume)}" target="_blank" rel="noopener">Resume</a>`
+  ].filter(Boolean).join("");
+  const contactBody = (p.email || links)
+    ? `${p.email ? `<p class="mail">${esc(p.email)}</p>` : ""}${links ? `<div class="actions">${links}</div>` : ""}`
+    : `<p class="hint">Add your email and profile links in the DATA block to show them here.</p>`;
+
+  return `
+  <section class="profile" aria-label="Profile">
+    <div class="cover${p.cover ? " has-img" : ""}"${coverStyle}></div>
+    <div class="profile-body">
+      <div class="avatar">${avatar}</div>
+      <h1>${esc(p.name)}</h1>
+      <p class="headline">${esc(p.headline)}</p>
+      <p class="meta">${esc(p.location)}</p>
+      <p class="about">${esc(p.about)}</p>
+      <div class="chips">${chips}</div>
+      <div class="actions">${resumeBtn}<a class="btn" href="#/contact">Contact</a></div>
+    </div>
+  </section>
+
+  <section class="block" id="journey">
+    <div class="block-head"><h2>Career road</h2><span class="hint">Scroll to drive. Tap a stop to open it.</span></div>
+    <div class="road" id="road"><svg aria-hidden="true"></svg>${stops}</div>
+  </section>
+
+  <section class="block" id="certs">
+    <div class="block-head"><h2>Certifications and hackathons</h2></div>
+    <div class="cards">${certs}</div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="block-head"><h2>Contact</h2></div>
+    <div class="contact"><p>Open to internships and projects in machine learning, data and LLM tools.</p>${contactBody}</div>
+  </section>`;
+}
+
+/* ---------- road ---------- */
+let road = null;
+function initRoad() {
+  const el = $("#road");
+  if (!el) { road = null; return; }
+  road = { el, svg: $("svg", el), cards: [...el.querySelectorAll(".stop")], pts: [], path: null, L: 0, car: null, clip: null, nodes: [] };
+  layoutRoad();
+  updateRoad();
+}
+function layoutRoad() {
+  if (!road) return;
+  const W = road.el.clientWidth, n = DATA.stops.length;
+  const mobile = W < 760, top = 70, gap = mobile ? 170 : 200, rw = mobile ? 24 : 38;
+  const H = top * 2 + (n - 1) * gap;
+  road.el.style.height = H + "px";
+  const pts = DATA.stops.map((s, i) => ({ x: mobile ? (i % 2 ? 30 : 62) : W * (i % 2 ? 0.36 : 0.64), y: top + i * gap }));
+  let d = `M${pts[0].x} ${pts[0].y}`;
+  for (let i = 1; i < n; i++) {
+    const a = pts[i - 1], b = pts[i], ym = (a.y + b.y) / 2;
+    d += ` C${a.x} ${ym} ${b.x} ${ym} ${b.x} ${b.y}`;
+  }
+  const nodes = pts.map((p, i) => `<circle class="node tone-${DATA.stops[i].tone}" cx="${p.x}" cy="${p.y}" r="${mobile ? 12 : 15}"/>`).join("");
+  road.svg.setAttribute("width", W);
+  road.svg.setAttribute("height", H);
+  road.svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  road.svg.innerHTML = `
+    <defs><clipPath id="roadClip"><rect id="clipRect" x="0" y="0" width="${W}" height="1"/></clipPath></defs>
+    <g clip-path="url(#roadClip)">
+      <path id="roadPath" d="${d}" fill="none" stroke="var(--road)" stroke-width="${rw}" stroke-linecap="round"/>
+      <path d="${d}" fill="none" stroke="var(--lane)" stroke-width="3" stroke-dasharray="10 12"/>
+    </g>
+    ${nodes}
+    <g id="car">
+      <rect x="-16" y="-9" width="32" height="18" rx="7" fill="var(--accent)"/>
+      <rect x="2" y="-6" width="9" height="12" rx="3" fill="var(--surface)"/>
+      <circle cx="-9" cy="-10" r="3.5" fill="var(--ink)"/><circle cx="-9" cy="10" r="3.5" fill="var(--ink)"/>
+      <circle cx="8" cy="-10" r="3.5" fill="var(--ink)"/><circle cx="8" cy="10" r="3.5" fill="var(--ink)"/>
+    </g>`;
+  road.pts = pts;
+  road.path = $("#roadPath", road.svg);
+  road.L = road.path.getTotalLength();
+  road.car = $("#car", road.svg);
+  road.clip = $("#clipRect", road.svg);
+  road.nodes = [...road.svg.querySelectorAll(".node")];
+  road.cards.forEach((c, i) => {
+    const p = pts[i];
+    c.style.top = p.y + "px";
+    if (mobile) {
+      c.style.left = "92px"; c.style.width = (W - 92 - 4) + "px";
+    } else if (i % 2 === 0) {
+      const left = p.x + rw / 2 + 28, w = Math.min(360, W - left - 4);
+      c.style.left = left + "px"; c.style.width = w + "px";
+    } else {
+      const edge = p.x - rw / 2 - 28, w = Math.min(360, edge - 4);
+      c.style.left = (edge - w) + "px"; c.style.width = w + "px";
+    }
+  });
+}
+function updateRoad() {
+  if (!road || !road.path) return;
+  const pts = road.pts, last = pts[pts.length - 1].y;
+  let y;
+  if (reduceMotion) y = last;
+  else {
+    const r = road.el.getBoundingClientRect();
+    y = Math.max(pts[0].y, Math.min(last, innerHeight * 0.55 - r.top));
+  }
+  let lo = 0, hi = road.L;
+  for (let k = 0; k < 22; k++) {
+    const mid = (lo + hi) / 2;
+    if (road.path.getPointAtLength(mid).y < y) lo = mid; else hi = mid;
+  }
+  const pt = road.path.getPointAtLength(hi);
+  const a = road.path.getPointAtLength(Math.max(0, hi - 3)), b = road.path.getPointAtLength(Math.min(road.L, hi + 3));
+  const ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
+  road.car.setAttribute("transform", `translate(${pt.x} ${pt.y}) rotate(${ang})`);
+  road.car.style.display = reduceMotion ? "none" : "";
+  road.clip.setAttribute("height", y + 20);
+  pts.forEach((p, i) => {
+    const on = p.y <= y + 1;
+    road.nodes[i].classList.toggle("reached", on);
+    road.cards[i].classList.toggle("reached", on);
+  });
+}
+let ticking = false;
+addEventListener("scroll", () => {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => { ticking = false; updateRoad(); });
+}, { passive: true });
+addEventListener("resize", () => { layoutRoad(); updateRoad(); });
+
+/* ---------- detail page ---------- */
+function pageView(id) {
+  const pg = DATA.pages[id];
+  const stop = DATA.stops.find(s => s.id === id);
+  const order = DATA.stops.filter(s => s.page);
+  const idx = order.findIndex(s => s.id === id);
+  const prev = order[idx - 1], next = order[idx + 1];
+  const metrics = pg.metrics && pg.metrics.length
+    ? `<div class="metrics">${pg.metrics.map(m => `<div class="metric"><b>${esc(m.value)}</b><span>${esc(m.label)}</span></div>`).join("")}</div>` : "";
+  const steps = pg.steps.map((s, i) => `
+    <li><button class="step${i === 0 ? " active" : ""}" type="button" data-i="${i}" aria-pressed="${i === 0}">
+      <span class="n">${i + 1}</span><span class="name">${esc(s.title)}</span>
+      ${s.status ? `<span class="badge ${s.status === "Built" ? "built" : ""}">${esc(s.status)}</span>` : ""}
+    </button></li>`).join("");
+  const links = (pg.links || []).filter(l => l.url).map(l => `<a class="btn" href="${esc(l.url)}"${ext(l.url)}>${esc(l.label)}</a>`).join("");
+  const stack = pg.stack.map(t => `<span class="chip">${esc(t)}</span>`).join("");
+  return `
+  <article class="tone-${stop.tone}">
+    <a class="back" href="#/journey">&larr; Back to the road</a>
+    <header class="page-head">
+      <div class="row"><span class="pill">${esc(pg.kind)}</span><span class="pill${pg.durationTodo ? " todo" : ""}">${esc(pg.duration)}</span>${pg.status ? `<span class="pill">${esc(pg.status)}</span>` : ""}</div>
+      <h1>${esc(pg.title)}</h1>
+      <p class="lead">${esc(pg.description)}</p>
+      ${pg.draft ? `<p class="draft">${esc(pg.draft)}</p>` : ""}
+      ${links ? `<div class="links">${links}</div>` : ""}
+    </header>
+    ${metrics}
+    <div class="grid">
+      <div>
+        <h2>Structure of the project</h2>
+        <p class="hint" style="margin-top:6px">Hover or tap a step to read how it works.</p>
+        <ol class="flow" id="flow">${steps}</ol>
+      </div>
+      <div class="side">
+        <div class="detail" id="detail" aria-live="polite"></div>
+        <div class="stack"><h3>Tech stack</h3><div class="chips">${stack}</div></div>
+      </div>
+    </div>
+    <nav class="pn" aria-label="More pages">
+      ${prev ? `<a href="#/p/${esc(prev.id)}"><small>Previous</small><strong>${esc(prev.title)}</strong></a>` : `<span></span>`}
+      ${next ? `<a class="next" href="#/p/${esc(next.id)}"><small>Next</small><strong>${esc(next.title)}</strong></a>` : `<span></span>`}
+    </nav>
+  </article>`;
+}
+function initPage(id) {
+  const pg = DATA.pages[id];
+  const detail = $("#detail"), buttons = [...document.querySelectorAll(".step")];
+  function setStep(i) {
+    const s = pg.steps[i];
+    buttons.forEach((b, k) => { b.classList.toggle("active", k === i); b.setAttribute("aria-pressed", k === i); });
+    detail.innerHTML = `<span class="count">Step ${i + 1} of ${pg.steps.length}${s.status ? " &middot; " + esc(s.status) : ""}</span>
+      <h3>${esc(s.title)}</h3><p>${esc(s.text)}</p>
+      ${s.points ? `<ul>${s.points.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}`;
+  }
+  const canHover = matchMedia("(hover: hover)").matches;
+  buttons.forEach((b, i) => {
+    b.addEventListener("click", () => setStep(i));
+    b.addEventListener("focus", () => setStep(i));
+    if (canHover) b.addEventListener("mouseenter", () => setStep(i));
+  });
+  setStep(0);
+}
+
+/* ---------- routing ---------- */
+let view = "";
+function route() {
+  const h = location.hash.replace(/^#\/?/, "");
+  const m = h.match(/^p\/(.+)$/);
+  if (m && DATA.pages[m[1]]) {
+    view = "page"; road = null;
+    app.innerHTML = pageView(m[1]);
+    initPage(m[1]);
+    document.title = DATA.pages[m[1]].title + " | " + DATA.profile.name;
+    scrollTo(0, 0);
+    return;
+  }
+  document.title = DATA.profile.name + " | Portfolio";
+  if (view !== "home") {
+    view = "home";
+    app.innerHTML = homeView();
+    initRoad();
+  }
+  const target = ["journey", "certs", "contact"].includes(h) ? document.getElementById(h) : null;
+  if (target) target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+  else scrollTo(0, 0);
+}
+addEventListener("hashchange", route);
+$("#foot").innerHTML = `&copy; ${new Date().getFullYear()} ${esc(DATA.profile.name)}`;
+route();
+</script>
+</body>
+</html>
