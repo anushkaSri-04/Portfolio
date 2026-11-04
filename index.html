@@ -210,6 +210,7 @@ const DATA = {
     { id: "credit-scoring", date: "Project", title: "Credit scoring", sub: "Stacked ensemble on Lending Club loans", tone: "lav", page: true },
     { id: "bluestock", date: "Sept - Oct 2025", title: "SDE intern, Bluestock Fintech", sub: "Python, Django, PostgreSQL", tone: "mint", page: true },
     { id: "research", date: "Research", title: "Research paper", sub: "Generative AI with a speech focus", tone: "rose", page: true },
+    { id: "jobhunt", date: "Oct 2026 - Nov 2026", title: "JobHunt", sub: "Personal job search and skill-matching system", tone: "lav", page: true },
     { id: "mcp-devmate", date: "Oct 2026 - now", title: "MCP DevMate AI", sub: "Coding assistant on a local MCP server", tone: "peach", page: true },
     { id: "graduation", date: "June 2027", title: "Graduation", sub: "B.Tech, AI & Data Science", tone: "sky" }
 ],
@@ -319,7 +320,66 @@ const DATA = {
         { title: "Benchmark", status: "Planned", text: "A set of 50 to 100 questions that measures tool-selection accuracy, execution success, task success, answer correctness and latency." }
       ],
       stack: ["Python", "MCP Python SDK", "FastAPI", "Pydantic", "GitHub REST API", "Pytest", "FAISS / Chroma", "Sentence-Transformers", "Docker", "GitHub Actions"],
-      links: [{label: "Paper Link", url: "https://github.com/anushkaSri-04/DevMate-AI"}]
+      links: [{label: "GitHub", url: "https://github.com/anushkaSri-04/DevMate-AI"}]
+    },
+
+    "jobhunt": {
+      kind: "Project",
+      title: "JobHunt: Personal Job Search & Skill-Matching System",
+      duration: "Oct 2026 - Nov 2026",
+      durationTodo: true,
+      description: "A personal job search automation and skill-matching system designed to simplify the job application process. JobHunt organizes job listings, evaluates opportunities against a candidate's technical skills and identifies skill gaps using rule-based NLP, keyword extraction and regex-based matching. It provides structured job information to support more informed and targeted applications.",
+
+      metrics: [],
+      steps: [
+        {
+          title: "Job Discovery",
+          status: "Built / In progress",
+          text: "A structured workflow for collecting and organizing job opportunities from supported job sources."
+        },
+        {
+          title: "Job Classification",
+          status: "Built / In progress",
+          text: "Processes job descriptions and extracts relevant information such as job titles, required skills and preferred qualifications."
+        },
+        {
+          title: "Skill Extraction",
+          status: "Built",
+          text: "Rule-based NLP and regex identify technical skills and keywords from job descriptions using a YAML-based skill configuration."
+        },
+        {
+          title: "Skill Matching",
+          status: "In progress",
+          text: "Compares extracted job requirements against the candidate's skill profile to identify matching skills and missing skills."
+        },
+        {
+          title: "Job Requirement Analysis",
+          status: "Planned",
+          text: "Separates required skills from nice-to-have skills to provide a clearer understanding of job expectations."
+        },
+        {
+          title: "Job Management",
+          status: "Built / In progress",
+          text: "Uses SQLAlchemy and SQLite to store and manage structured job information."
+        },
+        {
+          title: "Backend and Testing",
+          status: "Built / In progress",
+          text: "Python backend with FastAPI, modular application components and Pytest-based testing."
+        }
+      ],
+      stack: [
+        "Python",
+        "Rule-Based NLP",
+        "Regex",
+        "YAML",
+        "FastAPI",
+        "SQLAlchemy",
+        "SQLite",
+        "Pytest"
+      ],
+
+      links: [{label: "GitHub", url: "https://github.com/anushkaSri-04/JobHunt"}]
     }
   },
 
